@@ -92,7 +92,7 @@ public:
     //   - Then set name = "Square".
     Square(double side) : Rectangle(side, side)  {
         // TODO
-        name = "square" ;
+        name = "Square" ;
     }
     // Note: Square reuses Rectangle::area() — no need to rewrite it.
 };
@@ -115,11 +115,10 @@ double totalArea(const std::vector<Shape*>& shapes) {
 //         If the vector is empty, return "".
 std::string largestShapeName(const std::vector<Shape*>& shapes) {
     // TODO
-    if(shapes.empty())
-    return "";
+    if(shapes.empty()) return "";
     const Shape* biggest = shapes[0];
     for (const Shape* s : shapes){
-        if(s->area() > biggest ->area()) {
+        if(s->area() > biggest->area()) {
             biggest = s;
         }
     }
